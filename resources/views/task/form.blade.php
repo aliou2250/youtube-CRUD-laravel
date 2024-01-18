@@ -1,6 +1,6 @@
 <div class="row justify-content-center mt-5">
     <div class="col-6">
-        <h2 class="h2 mb-3">{{ $task->exists ? 'Modification de la tache '. $task->title : 'Ajouter une tache' }}</h2>
+        <h2 class="h2 mb-3">{{ $task->exists ? "Modification de l'article ". $task->title : "Ajouter un article" }}</h2>
         <form action="{{ route($task->exists ? 'tasks.update' : 'tasks.store', $task) }}" method="post">
             @csrf
             @method($task->exists ? 'put' : 'post')

@@ -19,4 +19,4 @@ Route::get('/', function () {
     return view('welcome', ['tasks' => Task::all()]);
 })->name('home');
 
-Route::resource('tasks', TaskController::class)->except(['index', 'show']);
+Route::resource('tasks', TaskController::class)->except(['index']);
